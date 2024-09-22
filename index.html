@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Form Validation</title>
+</head>
+<body>
+    
+    <div class="container">
+        <form>
+
+            <div class="input-group">
+                <label>Full Name</label> 
+                <input type="text" placeholder="Enter your name" id="name" onkeyup="validateName()">
+                <span id="name-error"></span>
+            </div>
+    
+            <div class="input-group">
+                <label>Phone No.</label> 
+                <input type="text" placeholder="1234567890" id="phone" onkeyup="validatePhone()">
+                <span id="phone-error"></span>
+            </div>
+    
+            <div class="input-group">
+                <label>Email Id</label>  
+                <input type="email" placeholder="Enter Email" id="email" onkeyup="validateEmail()">
+                <span id="email-error"></span>
+            </div>
+    
+            <div class="input-group">
+                <label>Your Message</label> 
+                <textarea rows="5" placeholder="Enter your message" id="message" onkeyup="validateMessage()"></textarea>
+                <span id="message-error"></span>
+            </div>
+    
+            <button onclick="return validateForm()">Submit</button>
+            <span id="submit-error"></span>
+
+        </form>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
